@@ -4,40 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>中歐三國 11 天旅遊攻略</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --navy:#1a3a5c;--teal:#0f6e56;--amber:#c8882a;--red:#a32d2d;
   --cream:#faf8f4;--white:#fff;--gray1:#f0ede8;--gray3:#c8c4bc;
-  --gray5:#8a8680;--gray7:#4a4742;--gray9:#2c2925;
-  --r:10px;
+  --gray5:#8a8680;--gray7:#4a4742;--gray9:#2c2925;--r:10px;
 }
-body{font-family:'Noto Sans TC','Inter',sans-serif;background:var(--cream);color:var(--gray9);line-height:1.6;font-size:14px}
-
-/* HERO */
+body{font-family:'Noto Sans CJK TC','Noto Sans TC','Microsoft JhengHei',sans-serif;background:var(--cream);color:var(--gray9);line-height:1.6;font-size:14px}
 .hero{background:linear-gradient(150deg,var(--navy) 0%,#0d2640 55%,var(--teal) 100%);color:#fff;padding:52px 20px 44px;text-align:center;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E")}
 .hero-eye{font-size:11px;letter-spacing:3px;text-transform:uppercase;opacity:.55;margin-bottom:10px}
-.hero h1{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,50px);font-weight:900;line-height:1.1;margin-bottom:14px}
+.hero h1{font-size:clamp(26px,5vw,50px);font-weight:900;line-height:1.1;margin-bottom:14px}
 .hero h1 span{color:#f0c060}
 .hero-sub{font-size:13px;opacity:.7;max-width:460px;margin:0 auto 24px}
 .chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
 .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:20px;padding:3px 12px;font-size:11px}
-
-/* CONTAINER */
 .container{max-width:900px;margin:0 auto;padding:0 16px}
-
-/* SECTION HEADER */
 .sec-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gray5);margin-bottom:6px;margin-top:44px}
-.sec-title{font-family:'Playfair Display',serif;font-size:clamp(18px,3vw,26px);color:var(--navy);margin-bottom:20px}
-
-/* MAP SVG BOX */
+.sec-title{font-size:clamp(18px,3vw,26px);color:var(--navy);margin-bottom:20px;font-weight:700}
 .map-box{background:#fff;border-radius:var(--r);box-shadow:0 4px 16px rgba(0,0,0,.1);padding:28px 20px;overflow-x:auto;margin-bottom:8px}
 .map-legend{display:flex;gap:20px;flex-wrap:wrap;font-size:11px;color:var(--gray5);margin-top:14px}
-.map-legend span{display:flex;align-items:center;gap:5px}
-
-/* DAY CARDS */
 .days{display:flex;flex-direction:column;gap:10px;margin-bottom:44px}
 .card{background:#fff;border-radius:var(--r);box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden;border:1px solid var(--gray1)}
 .card-hd{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;user-select:none}
@@ -63,17 +50,12 @@ body{font-family:'Noto Sans TC','Inter',sans-serif;background:var(--cream);color
 .tbox .td{font-size:11px;color:var(--gray5);margin-top:1px}
 .tipbox{background:#fdf3e3;border-left:3px solid var(--amber);border-radius:6px;padding:6px 10px;margin:4px 0;font-size:11px;color:#7a4a10}
 .alertbox{background:#fdf0f0;border-left:3px solid var(--red);border-radius:6px;padding:6px 10px;margin:4px 0;font-size:11px;color:var(--red)}
-
-/* HOTEL TABLE */
 .tbl{width:100%;border-collapse:collapse;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.07);font-size:12px;margin-bottom:44px}
 .tbl th{background:var(--navy);color:#fff;padding:9px 10px;text-align:left;font-size:11px;font-weight:600}
 .tbl td{padding:8px 10px;border-bottom:.5px solid var(--gray1);vertical-align:top}
 .tbl tr:last-child td{border:none}
 .tbl tr:nth-child(even) td{background:#f8f7f4}
 .hl{font-weight:600;color:var(--navy)}
-.warn{color:var(--red);font-size:10px;font-weight:600}
-
-/* CHECKLIST */
 .checklist{background:#fff;border-radius:var(--r);box-shadow:0 1px 4px rgba(0,0,0,.07);overflow:hidden;margin-bottom:44px}
 .cl-head{background:var(--teal);color:#fff;padding:12px 16px;font-size:13px;font-weight:600}
 .cl-item{display:flex;gap:10px;padding:8px 14px;border-bottom:.5px solid var(--gray1);font-size:12px;align-items:flex-start}
@@ -81,18 +63,15 @@ body{font-family:'Noto Sans TC','Inter',sans-serif;background:var(--cream);color
 .cl-dot{width:20px;height:20px;border-radius:50%;background:#d4f0e0;color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;margin-top:1px}
 .cl-txt{flex:1}
 .cl-note{font-size:10px;color:var(--gray5);margin-top:2px}
-
 footer{background:var(--navy);color:#fff;text-align:center;padding:24px;font-size:11px;opacity:.9}
 footer a{color:#f0c060;text-decoration:none}
 </style>
 </head>
 <body>
-
-<!-- HERO -->
 <div class="hero">
   <div class="hero-eye">Central Europe Travel Guide 2025</div>
   <h1>中歐三國 <span>11 天</span>旅遊攻略</h1>
-  <p class="hero-sub">奧地利 ・ 捷克 ・ 匈牙利｜9/21 抵達維也納 → 10/1 12:00 起飛</p>
+  <p class="hero-sub">奧地利 ・ 捷克 ・ 匈牙利｜9/22 08:40 抵達維也納 → 10/2 16:00 起飛</p>
   <div class="chips">
     <span class="chip">🇦🇹 奧地利 5 晚</span>
     <span class="chip">🇨🇿 捷克 3 晚</span>
@@ -104,8 +83,6 @@ footer a{color:#f0c060;text-decoration:none}
 </div>
 
 <div class="container">
-
-<!-- MAP -->
 <p class="sec-label">Route Overview</p>
 <h2 class="sec-title">路線地圖攻略</h2>
 <div class="map-box">
@@ -116,158 +93,122 @@ footer a{color:#f0c060;text-decoration:none}
       <marker id="arrT" markerWidth="8" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3z" fill="#0f6e56"/></marker>
       <filter id="sh"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity=".15"/></filter>
     </defs>
-    <!-- Backgrounds -->
     <rect width="820" height="380" fill="#eef4f8" rx="8"/>
     <rect x="8" y="8" width="310" height="364" fill="#f0f7f0" rx="6" opacity=".75"/>
     <rect x="326" y="8" width="210" height="364" fill="#e8f0f8" rx="6" opacity=".75"/>
     <rect x="544" y="8" width="268" height="364" fill="#fdf6ee" rx="6" opacity=".75"/>
-    <!-- Country labels -->
-    <text x="163" y="30" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#0f6e56" font-weight="700" text-anchor="middle">🇦🇹 奧地利</text>
-    <text x="431" y="30" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#1a3a5c" font-weight="700" text-anchor="middle">🇨🇿 捷克</text>
-    <text x="678" y="30" font-family="Noto Sans TC,sans-serif" font-size="12" fill="#c8882a" font-weight="700" text-anchor="middle">🇭🇺 匈牙利</text>
-
-    <!-- Route lines -->
-    <!-- Vienna -> Salzburg -->
+    <text x="163" y="30" font-family="Noto Sans CJK TC,sans-serif" font-size="12" fill="#0f6e56" font-weight="700" text-anchor="middle">&#127462;&#127481; 奧地利</text>
+    <text x="431" y="30" font-family="Noto Sans CJK TC,sans-serif" font-size="12" fill="#1a3a5c" font-weight="700" text-anchor="middle">&#127464;&#127487; 捷克</text>
+    <text x="678" y="30" font-family="Noto Sans CJK TC,sans-serif" font-size="12" fill="#c8882a" font-weight="700" text-anchor="middle">&#127469;&#127482; 匈牙利</text>
     <line x1="188" y1="150" x2="68" y2="158" stroke="#0f6e56" stroke-width="2" marker-end="url(#arrT)"/>
-    <!-- Salzburg -> Hallstatt (dotted side trip) -->
     <line x1="60" y1="170" x2="80" y2="260" stroke="#0f6e56" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrT)"/>
-    <!-- Hallstatt -> back Salzburg (dotted) -->
     <line x1="75" y1="262" x2="58" y2="178" stroke="#0f6e56" stroke-width="1.5" stroke-dasharray="4,3"/>
-    <!-- Salzburg -> CK -->
     <line x1="68" y1="158" x2="338" y2="248" stroke="#1a3a5c" stroke-width="2" marker-end="url(#arr)"/>
-    <!-- CK -> Prague -->
     <line x1="350" y1="244" x2="418" y2="118" stroke="#1a3a5c" stroke-width="2" marker-end="url(#arr)"/>
-    <!-- Prague -> Budapest -->
     <line x1="435" y1="115" x2="650" y2="195" stroke="#1a3a5c" stroke-width="2" marker-end="url(#arr)"/>
-    <!-- Budapest -> Vienna (return) -->
     <path d="M 650 208 Q 430 310 192 163" stroke="#c8882a" stroke-width="2" stroke-dasharray="6,3" fill="none" marker-end="url(#arrO)"/>
-
-    <!-- City nodes -->
-    <!-- Vienna -->
     <circle cx="190" cy="150" r="30" fill="white" stroke="#0f6e56" stroke-width="2.5" filter="url(#sh)"/>
-    <text x="190" y="144" font-family="Noto Sans TC,sans-serif" font-size="10" fill="#0f6e56" font-weight="700" text-anchor="middle">維也納</text>
-    <text x="190" y="156" font-family="Noto Sans TC,sans-serif" font-size="9" fill="#888" text-anchor="middle">Day 1,9,10</text>
-
-    <!-- Salzburg -->
+    <text x="190" y="144" font-family="Noto Sans CJK TC,sans-serif" font-size="10" fill="#0f6e56" font-weight="700" text-anchor="middle">維也納</text>
+    <text x="190" y="156" font-family="Noto Sans CJK TC,sans-serif" font-size="9" fill="#888" text-anchor="middle">Day1/10/11</text>
     <circle cx="58" cy="162" r="24" fill="white" stroke="#0f6e56" stroke-width="2" filter="url(#sh)"/>
-    <text x="58" y="157" font-family="Noto Sans TC,sans-serif" font-size="9" fill="#0f6e56" font-weight="700" text-anchor="middle">薩爾斯堡</text>
-    <text x="58" y="168" font-family="Noto Sans TC,sans-serif" font-size="9" fill="#888" text-anchor="middle">Day 2-4</text>
-
-    <!-- Hallstatt -->
+    <text x="58" y="157" font-family="Noto Sans CJK TC,sans-serif" font-size="9" fill="#0f6e56" font-weight="700" text-anchor="middle">薩爾斯堡</text>
+    <text x="58" y="168" font-family="Noto Sans CJK TC,sans-serif" font-size="9" fill="#888" text-anchor="middle">Day 2-4</text>
     <circle cx="82" cy="272" r="20" fill="white" stroke="#0f6e56" stroke-width="1.8" filter="url(#sh)"/>
-    <text x="82" y="267" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#0f6e56" font-weight="700" text-anchor="middle">哈爾施塔特</text>
-    <text x="82" y="278" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#888" text-anchor="middle">Day 3 當天</text>
-
-    <!-- Wolfgangsee -->
+    <text x="82" y="267" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#0f6e56" font-weight="700" text-anchor="middle">哈爾施塔特</text>
+    <text x="82" y="278" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#888" text-anchor="middle">Day 3 當天</text>
     <circle cx="108" cy="210" r="18" fill="white" stroke="#0f6e56" stroke-width="1.5" filter="url(#sh)"/>
-    <text x="108" y="206" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#0f6e56" font-weight="700" text-anchor="middle">沃爾夫岡</text>
-    <text x="108" y="216" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#888" text-anchor="middle">湖 Day 3</text>
-
-    <!-- CK -->
+    <text x="108" y="206" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#0f6e56" font-weight="700" text-anchor="middle">沃爾夫岡</text>
+    <text x="108" y="216" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#888" text-anchor="middle">湖 Day3</text>
     <circle cx="342" cy="252" r="22" fill="white" stroke="#1a3a5c" stroke-width="2" filter="url(#sh)"/>
-    <text x="342" y="247" font-family="Noto Sans TC,sans-serif" font-size="9" fill="#1a3a5c" font-weight="700" text-anchor="middle">CK 小鎮</text>
-    <text x="342" y="258" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#888" text-anchor="middle">Day 4</text>
-
-    <!-- Prague -->
+    <text x="342" y="247" font-family="Noto Sans CJK TC,sans-serif" font-size="9" fill="#1a3a5c" font-weight="700" text-anchor="middle">CK 小鎮</text>
+    <text x="342" y="258" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#888" text-anchor="middle">Day 5</text>
     <circle cx="424" cy="108" r="27" fill="white" stroke="#1a3a5c" stroke-width="2.5" filter="url(#sh)"/>
-    <text x="424" y="102" font-family="Noto Sans TC,sans-serif" font-size="10" fill="#1a3a5c" font-weight="700" text-anchor="middle">布拉格</text>
-    <text x="424" y="114" font-family="Noto Sans TC,sans-serif" font-size="9" fill="#888" text-anchor="middle">Day 5-6</text>
-
-    <!-- Budapest -->
+    <text x="424" y="102" font-family="Noto Sans CJK TC,sans-serif" font-size="10" fill="#1a3a5c" font-weight="700" text-anchor="middle">布拉格</text>
+    <text x="424" y="114" font-family="Noto Sans CJK TC,sans-serif" font-size="9" fill="#888" text-anchor="middle">Day 6-7</text>
     <circle cx="656" cy="200" r="27" fill="white" stroke="#c8882a" stroke-width="2.5" filter="url(#sh)"/>
-    <text x="656" y="194" font-family="Noto Sans TC,sans-serif" font-size="10" fill="#c8882a" font-weight="700" text-anchor="middle">布達佩斯</text>
-    <text x="656" y="206" font-family="Noto Sans TC,sans-serif" font-size="9" fill="#888" text-anchor="middle">Day 7-8</text>
-
-    <!-- Airport tag -->
+    <text x="656" y="194" font-family="Noto Sans CJK TC,sans-serif" font-size="10" fill="#c8882a" font-weight="700" text-anchor="middle">布達佩斯</text>
+    <text x="656" y="206" font-family="Noto Sans CJK TC,sans-serif" font-size="9" fill="#888" text-anchor="middle">Day 8-9</text>
     <rect x="175" y="92" width="68" height="18" fill="#0f6e56" rx="4"/>
-    <text x="209" y="105" font-family="Noto Sans TC,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="600">✈ VIE 機場</text>
-
-    <!-- Transport labels -->
-    <text x="128" y="148" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#0f6e56" text-anchor="middle">ÖBB 2.5hr</text>
-    <text x="210" y="220" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#1a3a5c" text-anchor="middle">FlixBus 3hr</text>
-    <text x="390" y="202" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#1a3a5c" text-anchor="middle">FlixBus 3hr</text>
-    <text x="552" y="148" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#1a3a5c" text-anchor="middle">Railjet 7hr</text>
-    <text x="430" y="330" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#c8882a" text-anchor="middle">Railjet 2.5hr 返程</text>
-    <text x="50" y="230" font-family="Noto Sans TC,sans-serif" font-size="8" fill="#0f6e56" text-anchor="middle">公車 Day3</text>
-
-    <!-- Legend -->
+    <text x="209" y="105" font-family="Noto Sans CJK TC,sans-serif" font-size="9" fill="white" text-anchor="middle" font-weight="600">✈ VIE 機場</text>
+    <text x="128" y="148" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#0f6e56" text-anchor="middle">OBB 2.5hr</text>
+    <text x="210" y="220" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#1a3a5c" text-anchor="middle">FlixBus 3hr</text>
+    <text x="390" y="202" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#1a3a5c" text-anchor="middle">FlixBus 3hr</text>
+    <text x="552" y="148" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#1a3a5c" text-anchor="middle">Railjet 7hr</text>
+    <text x="430" y="330" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#c8882a" text-anchor="middle">Railjet 2.5hr 返程</text>
+    <text x="50" y="230" font-family="Noto Sans CJK TC,sans-serif" font-size="8" fill="#0f6e56" text-anchor="middle">公車 Day3</text>
     <rect x="530" y="290" width="278" height="78" fill="white" rx="6" opacity=".92" filter="url(#sh)"/>
     <line x1="542" y1="310" x2="564" y2="310" stroke="#0f6e56" stroke-width="2" marker-end="url(#arrT)"/>
-    <text x="570" y="314" font-family="Noto Sans TC,sans-serif" font-size="10" fill="#2c2925">奧地利境內路線</text>
+    <text x="570" y="314" font-family="Noto Sans CJK TC,sans-serif" font-size="10" fill="#2c2925">奧地利境內路線</text>
     <line x1="542" y1="328" x2="564" y2="328" stroke="#1a3a5c" stroke-width="2" marker-end="url(#arr)"/>
-    <text x="570" y="332" font-family="Noto Sans TC,sans-serif" font-size="10" fill="#2c2925">薩 → CK → 布拉格 → 布達佩斯</text>
+    <text x="570" y="332" font-family="Noto Sans CJK TC,sans-serif" font-size="10" fill="#2c2925">薩 → CK → 布拉格 → 布達佩斯</text>
     <line x1="542" y1="346" x2="564" y2="346" stroke="#c8882a" stroke-width="2" stroke-dasharray="5,2" marker-end="url(#arrO)"/>
-    <text x="570" y="350" font-family="Noto Sans TC,sans-serif" font-size="10" fill="#2c2925">布達佩斯 → 維也納（返程）</text>
+    <text x="570" y="350" font-family="Noto Sans CJK TC,sans-serif" font-size="10" fill="#2c2925">布達佩斯 → 維也納（返程）</text>
   </svg>
   <div class="map-legend">
-    <span>🟢 奧地利：ÖBB 火車＋公車 150/543</span>
+    <span>🟢 奧地利：OBB 火車＋公車 150/543</span>
     <span>🔵 薩爾斯堡→CK→布拉格：FlixBus</span>
     <span>🟤 布拉格→布達佩斯：Railjet</span>
     <span>🟠 返程：Railjet 直達</span>
   </div>
 </div>
 
-<!-- DAYS -->
 <p class="sec-label">Daily Itinerary</p>
 <h2 class="sec-title">每日行程</h2>
 <div class="days" id="days"></div>
 
-<!-- HOTELS -->
 <p class="sec-label">Accommodation</p>
 <h2 class="sec-title">住宿總覽</h2>
 <table class="tbl">
   <thead><tr><th>城市</th><th>夜數</th><th>建議區域</th><th>平價推薦</th><th>注意事項</th></tr></thead>
   <tbody>
-    <tr><td><span class="hl">🇦🇹 維也納</span></td><td>3 晚<br><span style="font-size:10px;color:#888">Day1/9/10</span></td><td>Wien Mitte 附近</td><td>Motel One Wien-Hbf<br>EUR 80-100/晚</td><td>住 Wien Mitte 步行到 CAT 最方便</td></tr>
-    <tr><td><span class="hl">🎼 薩爾斯堡</span></td><td>2 晚<br><span style="font-size:10px;color:#888">Day 2-3</span></td><td>老城區或車站附近</td><td>Motel One Mirabell<br>EUR 85-110/晚</td><td>住老城步行方便，住車站性價比高</td></tr>
-    <tr><td><span class="hl">🏘 CK 小鎮</span></td><td>1 晚<br><span style="font-size:10px;color:#888">Day 4</span></td><td>老城區內</td><td>越近河邊越好<br>EUR 70-100/晚</td><td>選擇少，早訂！</td></tr>
-    <tr><td><span class="hl">🇨🇿 布拉格</span></td><td>2 晚<br><span style="font-size:10px;color:#888">Day 5-6</span></td><td>老城區 Staré Město</td><td>Miss Sophie's Downtown<br>EUR 70-100/晚</td><td>避開廣場正中心，選附近巷弄</td></tr>
-    <tr><td><span class="hl">🇭🇺 布達佩斯</span></td><td>2 晚<br><span style="font-size:10px;color:#888">Day 7-8</span></td><td>Pest 側第 5、6 區</td><td>Prestige Hotel Budapest<br>EUR 110-150/晚</td><td>住 Pest 側過橋就到 Buda 城堡</td></tr>
+    <tr><td><span class="hl">🇦🇹 維也納</span></td><td>3 晚<br><span style="font-size:10px;color:#888">Day1/10/11</span></td><td>Wien Mitte 附近</td><td>Motel One Wien-Hbf<br>EUR 80-100/晚</td><td>住 Wien Mitte 步行到 CAT 最方便</td></tr>
+    <tr><td><span class="hl">🎼 薩爾斯堡</span></td><td>2 晚<br><span style="font-size:10px;color:#888">Day 2-3</span></td><td>老城區或車站附近</td><td>Motel One Mirabell<br>EUR 85-110/晚</td><td>住老城步行方便</td></tr>
+    <tr><td><span class="hl">🏘 CK 小鎮</span></td><td>1 晚<br><span style="font-size:10px;color:#888">Day 5</span></td><td>老城區內，近河邊</td><td>EUR 70-100/晚</td><td>選擇少，早訂！</td></tr>
+    <tr><td><span class="hl">🇨🇿 布拉格</span></td><td>2 晚<br><span style="font-size:10px;color:#888">Day 6-7</span></td><td>老城區 Stare Mesto</td><td>Miss Sophie's Downtown<br>EUR 70-100/晚</td><td>避開廣場正中心，選附近巷弄</td></tr>
+    <tr><td><span class="hl">🇭🇺 布達佩斯</span></td><td>2 晚<br><span style="font-size:10px;color:#888">Day 8-9</span></td><td>Pest 側第 5、6 區</td><td>Prestige Hotel Budapest<br>EUR 110-150/晚</td><td>住 Pest 側過橋就到 Buda 城堡</td></tr>
   </tbody>
 </table>
 
-<!-- CHECKLIST -->
 <p class="sec-label">Before You Go</p>
 <h2 class="sec-title">出發前必做清單</h2>
 <div class="checklist">
   <div class="cl-head">✅ 預訂＋準備事項</div>
   <div class="cl-item"><div class="cl-dot">1</div><div class="cl-txt">FlixBus 薩爾斯堡→CK、CK→布拉格<div class="cl-note">提早訂票最省錢，EUR 21 起，官網或 App 購票</div></div></div>
-  <div class="cl-item"><div class="cl-dot">2</div><div class="cl-txt">Railjet 布拉格→布達佩斯、布達佩斯→維也納<div class="cl-note">EUR 21 / EUR 12 起，ÖBB 官網或 RegioJet 提早訂</div></div></div>
+  <div class="cl-item"><div class="cl-dot">2</div><div class="cl-txt">Railjet 布拉格→布達佩斯、布達佩斯→維也納<div class="cl-note">EUR 21 / EUR 12 起，OBB 官網或 RegioJet 提早訂</div></div></div>
   <div class="cl-item"><div class="cl-dot">3</div><div class="cl-txt">哈爾施塔特鹽礦＋Skywalk 套票<div class="cl-note">9 月旺季名額常滿，Klook 提前訂</div></div></div>
   <div class="cl-item"><div class="cl-dot">4</div><div class="cl-txt">布達佩斯塞切尼溫泉<div class="cl-note">Klook 線上預約，現場排隊 30-60 分鐘，預約可直接入場，EUR 25</div></div></div>
-  <div class="cl-item"><div class="cl-dot">5</div><div class="cl-txt">多瑙河夜遊船<div class="cl-note">KKday / Klook，EUR 15-20，Day 7 晚抵達後直接去</div></div></div>
+  <div class="cl-item"><div class="cl-dot">5</div><div class="cl-txt">多瑙河夜遊船<div class="cl-note">KKday / Klook，EUR 15-20，Day 8 晚抵達後直接去</div></div></div>
   <div class="cl-item"><div class="cl-dot">6</div><div class="cl-txt">布達佩斯國會大廈導覽票<div class="cl-note">官網或 Klook，EUR 26，電子票需列印紙本，遲到 10 分鐘票作廢</div></div></div>
   <div class="cl-item"><div class="cl-dot">7</div><div class="cl-txt">準備捷克克朗（CZK）與匈牙利福林（HUF）現金<div class="cl-note">兩國不使用歐元，機場換匯或當地 ATM 提領，公車建議帶現金</div></div></div>
-  <div class="cl-item"><div class="cl-dot">8</div><div class="cl-txt">購物保留收據＋商品原件（退稅用）<div class="cl-note">在歐盟購物滿 EUR 75 可退稅，10/1 在維也納機場安檢前蓋海關章</div></div></div>
+  <div class="cl-item"><div class="cl-dot">8</div><div class="cl-txt">購物保留收據＋商品原件（退稅用）<div class="cl-note">在歐盟購物滿 EUR 75 可退稅，10/2 在維也納機場安檢前蓋海關章</div></div></div>
 </div>
-
-</div><!-- /container -->
+</div>
 
 <footer>
   <p>中歐三國旅遊攻略 2025 ・ 票價與班次僅供參考，以購票時實際資訊為準</p>
-  <p style="margin-top:6px">訂票：<a href="https://www.oebb.at">ÖBB</a> ・ <a href="https://www.flixbus.com">FlixBus</a> ・ <a href="https://www.klook.com">Klook</a> ・ <a href="https://www.kkday.com">KKday</a></p>
+  <p style="margin-top:6px">訂票：<a href="https://www.oebb.at">OBB</a> ・ <a href="https://www.flixbus.com">FlixBus</a> ・ <a href="https://www.klook.com">Klook</a> ・ <a href="https://www.kkday.com">KKday</a></p>
 </footer>
 
 <script>
 const days=[
-  {n:"1",dt:"9/21",city:"維也納機場 → 市區",c:"g",tl:"抵達日",rows:[
-    {t:"07:00",i:"✈",x:"抵達維也納機場（VIE）",s:"辦理入境手續，約 30-40 分鐘"},
+  {n:"1",dt:"9/22",city:"維也納機場 → 市區",c:"g",tl:"抵達日",rows:[
+    {t:"08:40",i:"✈",x:"抵達維也納機場（VIE）",s:"辦理入境手續，約 30-40 分鐘"},
     {tp:"t",h:"🚆 CAT 城市快線 → Wien Mitte",d:"16 分鐘直達，每 30 分鐘一班｜EUR 14 單程"},
-    {t:"09:00",i:"🏨",x:"市區 check-in 放行李",s:"建議住 Wien Mitte 或環城大道附近"},
-    {t:"10:30",i:"🏰",x:"美泉宮（Schönbrunn Palace）",s:"花園免費，宮殿 Grand Tour 票 EUR 36，約 2-3 小時"},
-    {t:"14:00",i:"🎨",x:"百水公寓（Hundertwasser House）",s:"電車 1 號前往，外觀免費欣賞"},
-    {t:"16:30",i:"⛪",x:"史蒂芬大教堂（Stephansdom）",s:"外觀＋入內，登南塔 EUR 6，週一至六 09:00-11:30 觀光"},
+    {t:"10:00",i:"🏨",x:"市區 check-in 放行李",s:"建議住 Wien Mitte 或環城大道附近"},
+    {t:"11:30",i:"🏰",x:"美泉宮（Schonbrunn Palace）",s:"花園免費，宮殿 Grand Tour 票 EUR 36，約 2-3 小時"},
+    {t:"15:00",i:"🎨",x:"百水公寓（Hundertwasser House）",s:"電車 1 號前往，外觀免費欣賞"},
+    {t:"17:00",i:"⛪",x:"史蒂芬大教堂（Stephansdom）",s:"外觀＋入內，登南塔 EUR 6，週一至六 09:00-11:30 觀光，下午可進中殿"},
     {t:"18:30",i:"🚶",x:"格拉本大道（Graben）散步＋晚餐"},
   ]},
-  {n:"2",dt:"9/22",city:"維也納 → 薩爾斯堡",c:"b",tl:"移動日",rows:[
+  {n:"2",dt:"9/23",city:"維也納 → 薩爾斯堡",c:"b",tl:"移動日",rows:[
     {t:"08:30",i:"🎒",x:"退房，前往 Wien Hbf"},
-    {tp:"t",h:"🚆 ÖBB Wien Hbf → Salzburg Hbf",d:"約 2.5 小時｜EUR 25 起"},
+    {tp:"t",h:"🚆 OBB Wien Hbf → Salzburg Hbf",d:"約 2.5 小時｜EUR 25 起"},
     {t:"11:30",i:"🏨",x:"薩爾斯堡 check-in 放行李"},
     {t:"13:00",i:"🎼",x:"薩爾斯堡老城區漫遊",s:"莫札特出生地、米拉貝爾宮花園、大教堂（UNESCO）"},
     {t:"16:00",i:"🏰",x:"霍恩薩爾斯堡要塞（Hohensalzburg）",s:"纜車登頂俯瞰全城，票 EUR 16"},
     {t:"19:00",i:"🍺",x:"老城晚餐，嘗 Stiegl 在地生啤"},
   ]},
-  {n:"3",dt:"9/23",city:"大眾交通：哈爾施塔特 → 沃爾夫岡湖",c:"g",tl:"自然日",rows:[
+  {n:"3",dt:"9/24",city:"大眾交通：哈爾施塔特 → 沃爾夫岡湖",c:"g",tl:"自然日",rows:[
     {t:"07:30",i:"🚌",x:"薩爾斯堡火車站搭 150 號公車 → Bad Ischl",s:"約 90 分鐘，向司機買票，帶現金備用"},
     {t:"09:00",i:"🚌",x:"Bad Ischl 轉 543 號公車 → 哈爾施塔特",s:"約 45 分鐘"},
     {t:"10:00",i:"💀",x:"骨骸禮拜堂（Beinhaus）",s:"EUR 1.5，約 15 分鐘，全歐罕見奇景"},
@@ -279,12 +220,12 @@ const days=[
     {t:"16:15",i:"⛵",x:"渡輪橫越沃爾夫岡湖至 St. Wolfgang",s:"約 35 分鐘，約 90 分鐘一班，先確認班次"},
     {t:"17:00",i:"🚶",x:"St. Wolfgang 小鎮散步，湖邊咖啡廳小歇"},
     {t:"17:45",i:"🚌",x:"546 號公車 → Strobl，轉 150 返回薩爾斯堡",s:"約 60 分鐘"},
-    {tp:"alert",x:"⚠ 哈爾施塔特最後一班 543 往 Bad Ischl 約下午 6 點，務必注意不要錯過！"},
+    {tp:"alert",x:"⚠ 哈爾施塔特最後一班 543 往 Bad Ischl 約下午 6 點，務必注意！"},
     {t:"19:00",i:"🏨",x:"回薩爾斯堡，晚餐"},
   ]},
-  {n:"4",dt:"9/24",city:"薩爾斯堡 → CK 小鎮",c:"b",tl:"移動日",rows:[
-    {t:"07:30",i:"🎒",x:"退房，帶行李前往 Salzburg Süd（南站）",s:"需搭公車或計程車，提前 30 分出發"},
-    {tp:"t",h:"🚌 FlixBus Salzburg Süd → Ceský Krumlov",d:"約 3 小時｜EUR 21 起"},
+  {n:"4",dt:"9/25",city:"薩爾斯堡 → CK 小鎮",c:"b",tl:"移動日",rows:[
+    {t:"07:30",i:"🎒",x:"退房，帶行李前往 Salzburg Sud（南站）",s:"需搭公車或計程車，提前 30 分出發"},
+    {tp:"t",h:"🚌 FlixBus Salzburg Sud → Cesky Krumlov",d:"約 3 小時｜EUR 21 起"},
     {t:"11:00",i:"🏨",x:"抵達 CK 小鎮，check-in 放行李"},
     {t:"11:30",i:"🚶",x:"老城區漫遊，伏爾塔瓦河畔彩色房子拍照"},
     {t:"13:00",i:"🍽",x:"午餐，嘗南波西米亞燉牛肉"},
@@ -293,7 +234,7 @@ const days=[
     {t:"18:00",i:"🍽",x:"晚餐"},
     {tp:"tip",x:"💡 早點休息，明早清晨無人時段最美！"},
   ]},
-  {n:"5",dt:"9/25",city:"CK 小鎮 → 布拉格",c:"b",tl:"移動日",rows:[
+  {n:"5",dt:"9/26",city:"CK 小鎮 → 布拉格",c:"b",tl:"移動日",rows:[
     {t:"07:00",i:"🌅",x:"清晨無人的 CK 小鎮漫步",s:"河灣倒影最美時刻，遊客還沒來"},
     {t:"09:00",i:"🎒",x:"退房，前往巴士站"},
     {tp:"t",h:"🚌 FlixBus / RegioJet CK → Praha Florenc",d:"約 3 小時"},
@@ -303,23 +244,23 @@ const days=[
     {t:"18:00",i:"⏰",x:"天文鐘廣場整點鐘鳴表演"},
     {t:"19:30",i:"🍺",x:"老城晚餐＋捷克 Pilsner 生啤"},
   ]},
-  {n:"6",dt:"9/26",city:"布拉格城堡區＋老城",c:"g",tl:"觀光",rows:[
+  {n:"6",dt:"9/27",city:"布拉格城堡區＋老城",c:"g",tl:"觀光",rows:[
     {t:"08:00",i:"🏰",x:"布拉格城堡（Prague Castle）開門即入",s:"世界最大城堡群，早到避開人潮"},
-    {t:"09:00",i:"⛪",x:"聖維特大教堂（St. Vitus Cathedral）",s:"哥德式彩繪玻璃窗震撼，穆夏設計"},
+    {t:"09:00",i:"⛪",x:"聖維特大教堂（St. Vitus Cathedral）",s:"哥德式彩繪玻璃窗震撼"},
     {t:"11:00",i:"🏛",x:"黃金巷＋舊皇宮",s:"卡夫卡曾居此，城堡票包含"},
     {t:"13:00",i:"🍽",x:"午餐後步行下山，過查理大橋"},
-    {t:"15:00",i:"🕺",x:"跳舞的房子（Dancing House）",s:"蓋瑞設計的解構主義建築，頂樓酒吧俯瞰伏爾塔瓦河"},
+    {t:"15:00",i:"🕺",x:"跳舞的房子（Dancing House）",s:"蓋瑞設計，頂樓酒吧俯瞰伏爾塔瓦河"},
     {t:"17:00",i:"🏔",x:"佩特任山瞭望台（Petrin Tower）",s:"搭纜車上山，360 度俯瞰布拉格全城"},
     {t:"19:00",i:"🍽",x:"晚餐"},
   ]},
-  {n:"7",dt:"9/27",city:"布拉格 → 布達佩斯",c:"b",tl:"移動日",rows:[
+  {n:"7",dt:"9/28",city:"布拉格 → 布達佩斯",c:"b",tl:"移動日",rows:[
     {t:"07:30",i:"🎒",x:"退房，前往 Praha Hlavni nadrazi（主火車站）"},
     {tp:"t",h:"🚆 Railjet 直達 Praha → Budapest Keleti",d:"約 6.5-7 小時｜EUR 21 起（提早訂）"},
     {t:"15:00",i:"🏙",x:"抵達布達佩斯，地鐵 M2 check-in"},
     {t:"18:00",i:"🌃",x:"漁夫堡（Fisherman's Bastion）夜景",s:"日落後燈光最美，多瑙河夜景動人"},
     {t:"20:00",i:"🚢",x:"多瑙河夜遊船（EUR 15-20）",s:"KKday / Klook 提前訂，夜間城堡＋國會大廈最震撼"},
   ]},
-  {n:"8",dt:"9/28",city:"布達佩斯精華一日",c:"g",tl:"觀光",rows:[
+  {n:"8",dt:"9/29",city:"布達佩斯精華一日",c:"g",tl:"觀光",rows:[
     {t:"07:00",i:"🌅",x:"漁夫堡清晨日出，拍多瑙河＋國會大廈",s:"免費入場，清晨無人，光線最美"},
     {t:"09:00",i:"🏰",x:"布達城堡（Buda Castle）",s:"搭百年纜車（Funicular）登頂"},
     {t:"11:00",i:"🏛",x:"國會大廈內部導覽（EUR 26，約 45 分鐘）",s:"含匈牙利王冠珠寶廳，強烈建議！電子票需列印"},
@@ -328,7 +269,7 @@ const days=[
     {t:"16:00",i:"🦸",x:"英雄廣場（Heroes' Square）＋安德拉什大道步行"},
     {t:"17:30",i:"♨",x:"塞切尼溫泉（Szechenyi Baths）",s:"EUR 25，Klook 提前訂，可邊泡溫泉邊下棋"},
   ]},
-  {n:"9",dt:"9/29",city:"布達佩斯 → 返回維也納",c:"b",tl:"返程移動",rows:[
+  {n:"9",dt:"9/30",city:"布達佩斯 → 返回維也納",c:"b",tl:"返程移動",rows:[
     {t:"09:00",i:"🛒",x:"大市場（Nagy Vasarcsarnok）補買伴手禮",s:"紅椒粉、匈牙利酒，比維也納便宜"},
     {tp:"tip",x:"💡 今天是匈牙利購物最後機會，布達佩斯物價比維也納便宜！"},
     {t:"12:00",i:"🍽",x:"最後一頓匈牙利燉牛肉（Goulash）"},
@@ -336,43 +277,39 @@ const days=[
     {t:"17:30",i:"🏨",x:"抵達維也納，check-in 最後兩晚",s:"建議住 Wien Mitte 附近"},
     {t:"19:30",i:"🍷",x:"維也納晚餐，Naschmarkt 附近"},
   ]},
-  {n:"10",dt:"9/30",city:"維也納自由日",c:"g",tl:"彈性補遊",rows:[
+  {n:"10",dt:"10/1",city:"維也納自由日",c:"g",tl:"彈性補遊",rows:[
     {t:"10:00",i:"🏛",x:"霍夫堡皇宮（Hofburg）茜茜公主博物館",s:"若前幾天未去，今天補上"},
     {t:"12:00",i:"🍽",x:"午餐"},
     {t:"14:00",i:"🛍",x:"自由購物，補買維也納伴手禮",s:"Manner 威化餅、Mozart Kugel 巧克力"},
-    {t:"16:00",i:"☕",x:"維也納傳統咖啡廳",s:"推薦 Cafe Central 或 Cafe Hawelka，感受維也納咖啡廳文化"},
+    {t:"16:00",i:"☕",x:"維也納傳統咖啡廳",s:"推薦 Cafe Central 或 Cafe Hawelka"},
     {t:"19:00",i:"🍽",x:"晚餐，早點休息準備明天搭機"},
   ]},
-  {n:"11",dt:"10/1",city:"維也納 → 機場 → 起飛",c:"r",tl:"離境日",rows:[
-    {t:"07:00",i:"☕",x:"早餐＋整理行李"},
-    {t:"07:30",i:"🧾",x:"前往 Wien Mitte City Air Terminal",s:"部分航空可在此直接辦行李 check-in"},
-    {tp:"t",h:"🚆 CAT Wien Mitte → 維也納機場",d:"08:14 出發｜16 分鐘直達｜08:30 抵達，距起飛 3.5 小時"},
+  {n:"11",dt:"10/2",city:"維也納 → 機場 → 起飛",c:"r",tl:"離境日",rows:[
+    {t:"08:00",i:"☕",x:"早餐＋整理行李"},
+    {t:"09:30",i:"🚶",x:"維也納市區輕鬆散步，補買最後伴手禮",s:"16:00 才起飛，今天早上很從容！"},
+    {t:"11:00",i:"🍽",x:"維也納早午餐，從容享用"},
+    {t:"12:30",i:"🧾",x:"前往 Wien Mitte，辦 City Air Terminal 行李 check-in",s:"部分航空可在此直接辦行李 check-in"},
+    {tp:"t",h:"🚆 CAT Wien Mitte → 維也納機場",d:"13:14 出發｜16 分鐘直達｜13:30 抵達，距起飛 2.5 小時"},
     {tp:"alert",x:"⚠ 退稅：抵達機場第一件事去 Customs 蓋退稅章（安檢前！）旺季排隊 30-60 分鐘，過安檢後無法補蓋"},
-    {t:"08:30",i:"✅",x:"抵達維也納機場"},
-    {t:"08:35",i:"🛂",x:"海關蓋退稅章（Customs，安檢前）",s:"出示商品原件＋收據，蓋完後在 Global Blue / Planet 兌換現金"},
-    {t:"09:15",i:"🛄",x:"辦理 check-in＋行李托運"},
-    {t:"09:45",i:"🔐",x:"通過安檢，前往登機門"},
-    {t:"12:00",i:"✈",x:"準時起飛！返回台灣 ✨"},
+    {t:"13:30",i:"✅",x:"抵達維也納機場"},
+    {t:"13:35",i:"🛂",x:"海關蓋退稅章（Customs，安檢前）",s:"出示商品原件＋收據，蓋完後在 Global Blue / Planet 兌換現金"},
+    {t:"14:15",i:"🛄",x:"辦理 check-in＋行李托運"},
+    {t:"14:45",i:"🔐",x:"通過安檢，前往登機門"},
+    {t:"16:00",i:"✈",x:"準時起飛！返回台灣 ✨"},
   ]},
 ];
 
-const tagCls={g:"g",b:"b",r:"r"};
 const cont=document.getElementById("days");
 days.forEach((d,idx)=>{
   const div=document.createElement("div");
   div.className="card "+d.c;
   const hid="bd"+idx,cid="cv"+idx;
-  let rowsHtml="";
+  let html="";
   d.rows.forEach(r=>{
-    if(r.tp==="t"){
-      rowsHtml+=`<div class="tbox"><div class="th">${r.h}</div><div class="td">${r.d}</div></div>`;
-    } else if(r.tp==="tip"){
-      rowsHtml+=`<div class="tipbox">${r.x}</div>`;
-    } else if(r.tp==="alert"){
-      rowsHtml+=`<div class="alertbox">${r.x}</div>`;
-    } else {
-      rowsHtml+=`<div class="row"><span class="rtime">${r.t||""}</span><span class="rico">${r.i||""}</span><div class="rtxt">${r.x}${r.s?`<div class="sub">${r.s}</div>`:""}</div></div>`;
-    }
+    if(r.tp==="t") html+=`<div class="tbox"><div class="th">${r.h}</div><div class="td">${r.d}</div></div>`;
+    else if(r.tp==="tip") html+=`<div class="tipbox">${r.x}</div>`;
+    else if(r.tp==="alert") html+=`<div class="alertbox">${r.x}</div>`;
+    else html+=`<div class="row"><span class="rtime">${r.t||""}</span><span class="rico">${r.i||""}</span><div class="rtxt">${r.x}${r.s?`<div class="sub">${r.s}</div>`:""}</div></div>`;
   });
   div.innerHTML=`
     <div class="card-hd" onclick="toggle('${hid}','${cid}')">
@@ -381,11 +318,9 @@ days.forEach((d,idx)=>{
       <span class="tag ${d.c}">${d.tl}</span>
       <span class="chev" id="${cid}">▼</span>
     </div>
-    <div class="card-bd" id="${hid}">${rowsHtml}</div>
-  `;
+    <div class="card-bd" id="${hid}">${html}</div>`;
   cont.appendChild(div);
 });
-
 function toggle(bid,cid){
   const b=document.getElementById(bid),c=document.getElementById(cid);
   const open=b.classList.toggle("open");
