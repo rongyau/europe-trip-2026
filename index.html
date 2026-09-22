@@ -6,6 +6,18 @@
 <title>中歐三國 11 天旅遊攻略（敲定版）</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
+#gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:linear-gradient(150deg,#1a3a5c 0%,#0d2640 55%,#0f6e56 100%);padding:20px}
+#gate.hidden{display:none}
+#gate-box{background:#fff;border-radius:14px;padding:36px 28px;max-width:320px;width:100%;text-align:center;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+#gate-box .ge{font-size:34px;margin-bottom:10px}
+#gate-box h2{font-size:17px;color:#1a3a5c;margin-bottom:6px;font-weight:700}
+#gate-box p{font-size:12px;color:#8a8680;margin-bottom:18px}
+#gate-box input{width:100%;padding:11px 14px;border:1.5px solid #d8d4cc;border-radius:8px;font-size:15px;text-align:center;letter-spacing:2px;margin-bottom:12px;outline:none}
+#gate-box input:focus{border-color:#0f6e56}
+#gate-box button{width:100%;padding:11px;border:none;border-radius:8px;background:#0f6e56;color:#fff;font-size:14px;font-weight:600;cursor:pointer}
+#gate-box button:active{opacity:.85}
+#gate-err{color:#a32d2d;font-size:12px;margin-top:10px;min-height:16px}
+body.locked>*:not(#gate){display:none}
 :root{
   --navy:#1a3a5c;--teal:#0f6e56;--amber:#c8882a;--red:#a32d2d;--purple:#8a4fbf;
   --cream:#faf8f4;--gray1:#f0ede8;--gray3:#c8c4bc;--gray5:#8a8680;--gray9:#2c2925;--r:10px;
@@ -71,7 +83,17 @@ footer{background:var(--navy);color:#fff;text-align:center;padding:24px;font-siz
 footer a{color:#f0c060;text-decoration:none}
 </style>
 </head>
-<body>
+<body class="locked">
+<div id="gate">
+  <div id="gate-box">
+    <div class="ge">🔒</div>
+    <h2>中歐行程 — 需要密碼</h2>
+    <p>輸入密碼查看完整行程</p>
+    <input type="password" id="gate-pw" placeholder="請輸入密碼" autocomplete="off">
+    <button onclick="checkGatePw()">進入</button>
+    <div id="gate-err"></div>
+  </div>
+</div>
 <div class="hero">
   <div class="hero-eye">Central Europe Travel Guide 2026 - Confirmed</div>
   <h1>中歐三國 <span>11 天</span>旅遊攻略</h1>
@@ -503,6 +525,29 @@ function toggle(bid,cid){
   const b=document.getElementById(bid),c=document.getElementById(cid);
   const open=b.classList.toggle("open");
   c.style.transform=open?"rotate(180deg)":"";
+}
+
+// 密碼保護：修改密碼請見檔案內註解
+const GATE_HASH = "b377e5bff3647e3ea157c09924f8a1727de08c28f61ebb54cc237934f1de6a30"; // 預設密碼: eurotrip2026
+async function sha256(msg){
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(msg));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,"0")).join("");
+}
+async function checkGatePw(){
+  const pw = document.getElementById("gate-pw").value;
+  const hash = await sha256(pw);
+  if(hash === GATE_HASH){
+    document.getElementById("gate").classList.add("hidden");
+    document.body.classList.remove("locked");
+    sessionStorage.setItem("gateOk","1");
+  } else {
+    document.getElementById("gate-err").textContent = "密碼錯誤，請再試一次";
+  }
+}
+document.getElementById("gate-pw").addEventListener("keydown", e=>{ if(e.key==="Enter") checkGatePw(); });
+if(sessionStorage.getItem("gateOk")==="1"){
+  document.getElementById("gate").classList.add("hidden");
+  document.body.classList.remove("locked");
 }
 </script>
 </body>
